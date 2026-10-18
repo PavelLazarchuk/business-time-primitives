@@ -1,6 +1,6 @@
 {
     "name": "business-time-primitives",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Business hours and SLA math as pure functions — add business time, business time between, open now / opens at, business days with cutoffs, pausable SLA clocks. Split and overnight shifts, holidays, date overrides. Time zones via Intl, wall-clock correct across DST, JSON-serializable, no clock reads, no dependencies. Runs in Node, browsers, Deno, Bun and Cloudflare Workers.",
     "license": "MIT",
     "sideEffects": false,
