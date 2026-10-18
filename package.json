@@ -1,0 +1,120 @@
+{
+    "name": "business-time-primitives",
+    "version": "1.0.0",
+    "description": "Business hours and SLA math as pure functions — add business time, business time between, open now / opens at, business days with cutoffs, pausable SLA clocks. Split and overnight shifts, holidays, date overrides. Time zones via Intl, wall-clock correct across DST, JSON-serializable, no clock reads, no dependencies. Runs in Node, browsers, Deno, Bun and Cloudflare Workers.",
+    "license": "MIT",
+    "sideEffects": false,
+    "type": "module",
+    "engines": {
+        "node": ">=18"
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint .",
+        "check-exports": "publint && attw --pack .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "test:watch": "vitest",
+        "smoke": "node scripts/smoke.mjs",
+        "size": "size-limit",
+        "pack:verify": "npm pack --dry-run",
+        "changeset": "changeset",
+        "release": "npm run build && node scripts/publish-if-new.mjs",
+        "prepare": "husky"
+    },
+    "keywords": [
+        "business-hours",
+        "business-time",
+        "working-hours",
+        "working-time",
+        "opening-hours",
+        "open-now",
+        "business-days",
+        "workdays",
+        "holidays",
+        "sla",
+        "sla-timer",
+        "sla-clock",
+        "service-level-agreement",
+        "deadline",
+        "due-date",
+        "helpdesk",
+        "support-tickets",
+        "cutoff",
+        "settlement",
+        "shifts",
+        "overnight",
+        "timezone",
+        "dst",
+        "iana",
+        "intl",
+        "temporal",
+        "pure-functions",
+        "serializable",
+        "edge",
+        "cloudflare-workers",
+        "deno",
+        "typescript",
+        "zero-dependencies"
+    ],
+    "author": "Pavel Lazarchuk",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PavelLazarchuk/business-time-primitives.git"
+    },
+    "bugs": {
+        "url": "https://github.com/PavelLazarchuk/business-time-primitives/issues"
+    },
+    "homepage": "https://github.com/PavelLazarchuk/business-time-primitives#readme",
+    "devDependencies": {
+        "@arethetypeswrong/cli": "^0.18.5",
+        "@changesets/cli": "^3.0.3",
+        "@eslint/js": "^10.0.1",
+        "@size-limit/preset-small-lib": "^13.0.3",
+        "@types/node": "^24.13.3",
+        "@vitest/coverage-v8": "^4.1.11",
+        "eslint": "^10.9.1",
+        "eslint-config-prettier": "^10.1.8",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.4.1",
+        "prettier": "^3.9.6",
+        "publint": "^0.3.24",
+        "size-limit": "^13.0.3",
+        "tsup": "^8.5.1",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.68.0",
+        "vitest": "^4.1.11"
+    },
+    "overrides": {
+        "tsup": {
+            "esbuild": "^0.28.2"
+        }
+    }
+}

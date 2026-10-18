@@ -1,0 +1,28 @@
+[
+    {
+        "name": "business-time-primitives",
+        "path": "dist/index.js",
+        "limit": "6.8 kB",
+        "gzip": true
+    },
+    {
+        "name": "business-time-primitives (cjs)",
+        "path": "dist/index.cjs",
+        "limit": "7 kB",
+        "gzip": true
+    },
+    {
+        "name": "tree-shaking: { isOpen } only",
+        "path": "dist/index.js",
+        "import": "{ isOpen }",
+        "limit": "4.4 kB",
+        "gzip": true
+    },
+    {
+        "name": "tree-shaking: { addBusinessDays } only",
+        "path": "dist/index.js",
+        "import": "{ addBusinessDays }",
+        "limit": "4.2 kB",
+        "gzip": true
+    }
+]
