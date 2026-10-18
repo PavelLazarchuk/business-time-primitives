@@ -1,5 +1,8 @@
 # business-time-primitives
 
+[![npm version](https://img.shields.io/npm/v/business-time-primitives.svg)](https://www.npmjs.com/package/business-time-primitives)
+[![npm downloads](https://img.shields.io/npm/dm/business-time-primitives.svg)](https://www.npmjs.com/package/business-time-primitives)
+
 Business hours and SLA math as pure functions.
 
 "Reply within 4 business hours", "ships in 2 business days", "open now · closes
