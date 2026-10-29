@@ -92,6 +92,11 @@ export function businessDateOf(
     options: BusinessDateOptions = {}
 ): string {
     const compiled = compile(calendar);
+    if (typeof options !== 'object' || options === null) {
+        throw new TypeError(
+            `businessDateOf: options must be an object, got ${options === null ? 'null' : typeof options}`
+        );
+    }
     let cutoff = DAY_MS;
     if (options.cutoff !== undefined) {
         const parsed = typeof options.cutoff === 'string' ? parseTime(options.cutoff) : null;

@@ -132,6 +132,9 @@ describe('businessDateOf', () => {
         expect(() => businessDateOf(nyOffice, 0, { cutoff: 14 as unknown as string })).toThrow(
             'businessDateOf: cutoff 14'
         );
+        expect(() => businessDateOf(nyOffice, 0, null as never)).toThrow(
+            'businessDateOf: options must be an object, got null'
+        );
         const never = defineCalendar({ timeZone: 'UTC', week: {} });
         expect(() => businessDateOf(never, 0)).toThrow(
             'businessDateOf: the calendar runs out of business days after 1970-01-01'
