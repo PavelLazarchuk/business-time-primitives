@@ -1,5 +1,11 @@
 # business-time-primitives
 
+## 1.0.2
+
+### Patch Changes
+
+- db88052: `businessDateOf` rejects `options` that are not an object with `businessDateOf: options must be an object, got null` instead of a `TypeError` from reading `cutoff` of `null`.
+
 ## 1.0.1
 
 ### Patch Changes
